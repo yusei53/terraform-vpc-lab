@@ -5,6 +5,7 @@ This repository is designed for learning Terraform and HashiCorp Configuration L
 This project demonstrates how to:
 - Create AWS VPC using Terraform
 - Learn HCL (HashiCorp Configuration Language) basics
+- Deploy EC2 instances within the VPC
 - Understand Terraform workflow and best practices
 
 ## Prerequisites
