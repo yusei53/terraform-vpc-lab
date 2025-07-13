@@ -4,6 +4,7 @@ provider "aws" {
 
 locals {
   app_name = "web"
+  name_prefix = "${var.env}-${local.app_name}"
 }
 
 variable "env" {
@@ -14,7 +15,7 @@ variable "env" {
 resource "aws_vpc" "web_vpc" {
   cidr_block = "10.0.0.0/16"
   tags = {
-    Name = "${var.env}-${local.app_name}-vpc"
+    Name = "${local.name_prefix}-vpc"
   }
 }
 
@@ -22,6 +23,6 @@ resource "aws_subnet" "web_subnet" {
   vpc_id = aws_vpc.web_vpc.id
   cidr_block = "10.0.1.0/24"
   tags = {
-    Name = "${var.env}-${local.app_name}-subnet"
+    Name = "${local.name_prefix}-subnet"
   }
 }
