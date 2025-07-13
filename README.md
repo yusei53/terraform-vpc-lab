@@ -1,4 +1,4 @@
-## Terraform VPC Sandbox
+## Terraform VPC Lab
 
 This repository is designed for learning Terraform and HashiCorp Configuration Language (HCL) by creating AWS VPC infrastructure.
 
